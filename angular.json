@@ -143,7 +143,7 @@
             ]
           }
         },
-        "lint1": {
+        "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
@@ -168,7 +168,7 @@
             "devServerTarget": "ngx-admin-demo:serve"
           }
         },
-        "lint1": {
+        "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
