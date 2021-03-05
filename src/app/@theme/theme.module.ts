@@ -39,6 +39,11 @@ import { COSMIC_THEME } from './styles/theme.cosmic';
 import { CORPORATE_THEME } from './styles/theme.corporate';
 import { DARK_THEME } from './styles/theme.dark';
 
+import { NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeService } from '@nebular/theme';
+
+
+const providers =  [ NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeService ] 
+
 const NB_MODULES = [
   NbLayoutModule,
   NbMenuModule,
@@ -74,7 +79,9 @@ const PIPES = [
   imports: [CommonModule, ...NB_MODULES],
   exports: [CommonModule, ...PIPES, ...COMPONENTS],
   declarations: [...COMPONENTS, ...PIPES],
+  providers: [...providers]
 })
+
 export class ThemeModule {
   static forRoot(): ModuleWithProviders<ThemeModule> {
     return {
