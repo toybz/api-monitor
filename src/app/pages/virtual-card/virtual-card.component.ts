@@ -57,8 +57,6 @@ export class VirtualCardComponent {
     },
   };
 
-  source: LocalDataSource = new LocalDataSource();
-
   BASE_API_URL = "api.flutterwave.com"
 
   data = [

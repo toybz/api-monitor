@@ -4,8 +4,8 @@ import {NbCardModule, NbIconModule, NbInputModule, NbMenuModule, NbTreeGridModul
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
-import {VirtualCardComponent} from "./virtual-card/virtual-card.component";
 import {Ng2SmartTableModule} from "ng2-smart-table";
+import {VirtualCardComponent} from "./virtual-card/virtual-card.component";
 
 @NgModule({
   imports: [
