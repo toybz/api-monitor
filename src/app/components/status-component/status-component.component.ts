@@ -19,9 +19,10 @@ export class StatusComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.renderValue = this.value.toString().toUpperCase();
 
-    this.color = this.value === 'Live' ? 'green-bg' : 'red-bg';
+    this.renderValue = this.value == 200 ? 'LIVE' : 'DOWN'
+
+    this.color = this.value == 200 ? 'green-bg' : 'red-bg';
   }
 
 

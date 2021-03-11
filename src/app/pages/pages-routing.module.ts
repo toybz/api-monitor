@@ -9,17 +9,18 @@ const routes: Routes = [{
   component: PagesComponent,
   children: [
     {
-      path: 'virtual-card',
-      component: VirtualCardComponent
+      path: 'api-status/:category',
+      component: VirtualCardComponent,
     },
     {
       path: '',
-      redirectTo: 'virtual-card',
+      redirectTo: 'api-status/charge',
       pathMatch: 'full',
     },
+
     {
       path: '**',
-      redirectTo: 'virtual-card',
+      redirectTo: 'api-status/charge',
     },
   ],
 }];

@@ -11,12 +11,12 @@ import {
 
 export const routes: Routes = [
   {
-    path: 'pages',
+    path: 'page',
     loadChildren: () => import('./pages/pages.module')
       .then(m => m.PagesModule),
   },
-  { path: '', redirectTo: 'pages', pathMatch: 'full' },
-  { path: '**', redirectTo: 'pages' },
+  { path: '', redirectTo: 'page', pathMatch: 'full' },
+  { path: '**', redirectTo: 'page' },
 ];
 
 const config: ExtraOptions = {

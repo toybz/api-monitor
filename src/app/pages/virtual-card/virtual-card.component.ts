@@ -4,6 +4,8 @@ import { LocalDataSource } from 'ng2-smart-table';
 
 
 import { StatusComponent } from '../../components/status-component/status-component.component';
+import {ActivatedRoute, NavigationEnd, NavigationError, NavigationStart, Router} from "@angular/router";
+import {ApiService} from "../../services/api.service";
 
 @Component({
   selector: 'ngx-smart-table',
@@ -57,96 +59,61 @@ export class VirtualCardComponent {
     },
   };
 
-  BASE_API_URL = "api.flutterwave.com"
+  data: any = []
 
-  data = [
+  constructor(private route: ActivatedRoute, private router: Router,   private apiService: ApiService) {
 
-    {
-      name: "Create New Virtual Card",
-      method: "POST",
-      url: "api.flutterwave.com/v3/virtual-cards",
-      status: "Down",
-      lastRequestTime: "10/02/20 11:00 AM",
-      lastDownTime: "10/02/19 11:00 AM"
-    } ,
-
-    {
-      name: "Get Virtual Cards",
-      method: "GET",
-      url: "api.flutterwave.com/v3/virtual-cards",
-      status: "Live",
-      lastRequestTime: "10/02/20 11:00 AM",
-      lastDownTime: "10/02/19 11:00 AM"
-    } ,
-    {
-      name: "Get A Virtual Card",
-      method: "GET",
-      url: "api.flutterwave.com/v3/virtual-cards/:id",
-      status: "Down",
-      lastRequestTime: "10/02/20 11:00 AM",
-      lastDownTime: "10/02/19 11:00 AM"
-    } ,
-    {
-      name: "Terminate Virtual Card",
-      method: "PUT",
-      url: "api.flutterwave.com/v3/virtual-cards/:id/terminate",
-      status: "Live",
-      lastRequestTime: "10/02/20 11:00 AM",
-      lastDownTime: "10/02/19 11:00 AM"
-    } ,
-    {
-      name: "Fund Virtual Card",
-      method: "POST",
-      url: "api.flutterwave.com/v3/virtual-cards/:id/fund",
-      status: "Live",
-      lastRequestTime: "10/02/20 11:00 AM",
-      lastDownTime: "10/02/19 11:00 AM"
-    } ,
-    {
-      name: "Get Virtual Card Transactions",
-      method: "GET",
-      url: "api.flutterwave.com/v3/virtual-cards/:id/transactions?from=&to=&index=&size=",
-      status: "Live",
-      lastRequestTime: "10/02/20 11:00 AM",
-      lastDownTime: "10/02/19 11:00 AM"
-    } ,
-    {
-      name: "Withdraw From Virtual Card",
-      method: "POST",
-      url: "api.flutterwave.com/v3/virtual-cards/:id/withdraw",
-      status: "Live",
-      lastRequestTime: "10/02/20 11:00 AM",
-      lastDownTime: "10/02/19 11:00 AM"
-    } ,
-    {
-      name: "Update Virtual Card Status",
-      method: "PUT",
-      url: "api.flutterwave.com/v3/virtual-cards/:id/status/:status_action",
-      status: "Live",
-      lastRequestTime: "10/02/20 11:00 AM",
-      lastDownTime: "10/02/19 11:00 AM"
-    } ,
-
-
-
-
-
-
-
-
-
-  ]
-
-  constructor() {
-   // const data = this.service.getData();
-  ///  this.source.load(data);
   }
 
-  onDeleteConfirm(event): void {
-    if (window.confirm('Are you sure you want to delete?')) {
-      event.confirm.resolve();
-    } else {
-      event.confirm.reject();
-    }
+  ngOnInit() {
+
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        // Show loading indicator
+      }
+
+      if (event instanceof NavigationEnd) {
+        // Hide loading indicator
+
+        const url = event.url
+
+        const category = url.substring(url.lastIndexOf('/') + 1)
+
+        this.getApiStatus(category)
+        console.log("Route  changed", category)
+      }
+
+      if (event instanceof NavigationError) {
+        // Hide loading indicator
+
+        // Present error to user
+        console.log(event.error);
+      }
+    });
+
+
+
+
+    const routeParams = this.route.snapshot.paramMap;
+    const category = routeParams.get('category');
+
+    this.getApiStatus(category)
+
+
   }
+
+  getApiStatus(category){
+
+    this.apiService.getApiStatus(category).subscribe((res: any) => this.data =  res.data)
+
+    console.log("New data", this.data)
+
+
+
+  }
+
+
+
+
+
 }
