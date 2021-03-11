@@ -3,8 +3,32 @@
 // @nebular out of the box themes
 @import '~@nebular/theme/styles/themes';
 
+
+
 $nb-themes: nb-register-theme((
-  layout-padding-top: 2.25rem,
+
+
+        color-primary-100: #FEF4D2,
+        color-primary-200: #FEE7A6,
+        color-primary-300: #FCD57A,
+        color-primary-400: #F9C258,
+        color-primary-500: #F5A623,
+        color-primary-600: #D28519,
+        color-primary-700: #B06811,
+        color-primary-800: #8E4D0B,
+        color-primary-900: #753A06,
+        color-primary-transparent-100: rgba(245, 166, 35, 0.08),
+        color-primary-transparent-200: rgba(245, 166, 35, 0.16),
+        color-primary-transparent-300: rgba(245, 166, 35, 0.24),
+        color-primary-transparent-400: rgba(245, 166, 35, 0.32),
+        color-primary-transparent-500: rgba(245, 166, 35, 0.4),
+        color-primary-transparent-600: rgba(245, 166, 35, 0.48),
+
+
+
+
+
+        layout-padding-top: 2.25rem,
 
   menu-item-icon-margin: 0 0.5rem 0 0,
 
@@ -25,7 +49,28 @@ $nb-themes: nb-register-theme((
 ), default, default);
 
 $nb-themes: nb-register-theme((
-  layout-padding-top: 2.25rem,
+
+        color-primary-100: #FEF4D2,
+        color-primary-200: #FEE7A6,
+        color-primary-300: #FCD57A,
+        color-primary-400: #F9C258,
+        color-primary-500: #F5A623,
+        color-primary-600: #D28519,
+        color-primary-700: #B06811,
+        color-primary-800: #8E4D0B,
+        color-primary-900: #753A06,
+        color-primary-transparent-100: rgba(245, 166, 35, 0.08),
+        color-primary-transparent-200: rgba(245, 166, 35, 0.16),
+        color-primary-transparent-300: rgba(245, 166, 35, 0.24),
+        color-primary-transparent-400: rgba(245, 166, 35, 0.32),
+        color-primary-transparent-500: rgba(245, 166, 35, 0.4),
+        color-primary-transparent-600: rgba(245, 166, 35, 0.48),
+
+
+
+
+
+        layout-padding-top: 2.25rem,
 
   menu-item-icon-margin: 0 0.5rem 0 0,
 
@@ -46,7 +91,27 @@ $nb-themes: nb-register-theme((
 ), cosmic, cosmic);
 
 $nb-themes: nb-register-theme((
-  layout-padding-top: 2.25rem,
+
+        color-primary-100: #FEF4D2,
+        color-primary-200: #FEE7A6,
+        color-primary-300: #FCD57A,
+        color-primary-400: #F9C258,
+        color-primary-500: #F5A623,
+        color-primary-600: #D28519,
+        color-primary-700: #B06811,
+        color-primary-800: #8E4D0B,
+        color-primary-900: #753A06,
+        color-primary-transparent-100: rgba(245, 166, 35, 0.08),
+        color-primary-transparent-200: rgba(245, 166, 35, 0.16),
+        color-primary-transparent-300: rgba(245, 166, 35, 0.24),
+        color-primary-transparent-400: rgba(245, 166, 35, 0.32),
+        color-primary-transparent-500: rgba(245, 166, 35, 0.4),
+        color-primary-transparent-600: rgba(245, 166, 35, 0.48),
+
+
+
+
+        layout-padding-top: 2.25rem,
 
   menu-item-icon-margin: 0 0.5rem 0 0,
 
@@ -67,7 +132,28 @@ $nb-themes: nb-register-theme((
 ), corporate, corporate);
 
 $nb-themes: nb-register-theme((
-  layout-padding-top: 2.25rem,
+
+
+        color-primary-100: #FEF4D2,
+        color-primary-200: #FEE7A6,
+        color-primary-300: #FCD57A,
+        color-primary-400: #F9C258,
+        color-primary-500: #F5A623,
+        color-primary-600: #D28519,
+        color-primary-700: #B06811,
+        color-primary-800: #8E4D0B,
+        color-primary-900: #753A06,
+        color-primary-transparent-100: rgba(245, 166, 35, 0.08),
+        color-primary-transparent-200: rgba(245, 166, 35, 0.16),
+        color-primary-transparent-300: rgba(245, 166, 35, 0.24),
+        color-primary-transparent-400: rgba(245, 166, 35, 0.32),
+        color-primary-transparent-500: rgba(245, 166, 35, 0.4),
+        color-primary-transparent-600: rgba(245, 166, 35, 0.48),
+
+
+
+
+        layout-padding-top: 2.25rem,
 
   menu-item-icon-margin: 0 0.5rem 0 0,
 
@@ -86,3 +172,6 @@ $nb-themes: nb-register-theme((
   slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
   slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
 ), dark, dark);
+
+
+
