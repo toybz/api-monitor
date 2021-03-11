@@ -68,6 +68,8 @@ export class ApiStatusComponent implements OnInit {
 
   data: any = []
 
+  title = ''
+
   constructor(private route: ActivatedRoute, private router: Router,   private apiService: ApiService) {
 
   }
@@ -86,6 +88,11 @@ export class ApiStatusComponent implements OnInit {
 
         const category = url.substring(url.lastIndexOf('/') + 1)
 
+
+        this.setPageTitle(category)
+
+
+
         this.getApiStatus(category)
         console.log("Route  changed", category)
       }
@@ -103,7 +110,7 @@ export class ApiStatusComponent implements OnInit {
 
     const routeParams = this.route.snapshot.paramMap;
     const category = routeParams.get('category');
-
+    this.setPageTitle(category)
     this.getApiStatus(category)
 
 
@@ -116,9 +123,12 @@ export class ApiStatusComponent implements OnInit {
     console.log("New data", this.data)
 
 
-
   }
 
+  setPageTitle(category){
+    let title = category.replace(/-/g, ' ')
+    this.title =   title.charAt(0).toUpperCase() + title.slice(1)
+  }
 
 
 
