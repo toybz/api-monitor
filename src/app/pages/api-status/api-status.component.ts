@@ -91,8 +91,6 @@ export class ApiStatusComponent implements OnInit {
 
         this.setPageTitle(category)
 
-
-
         this.getApiStatus(category)
         console.log("Route  changed", category)
       }
@@ -104,8 +102,6 @@ export class ApiStatusComponent implements OnInit {
         console.log(event.error);
       }
     });
-
-
 
 
     const routeParams = this.route.snapshot.paramMap;
