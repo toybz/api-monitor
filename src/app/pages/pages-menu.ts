@@ -4,127 +4,126 @@ export const MENU_ITEMS: NbMenuItem[] = [
 
   {
     title: 'Charge',
-    icon: 'credit-card-outline',
+    icon: 'plus-circle-outline',
     link: '/page/api-status/charge',
     home: true,
   },
 
   {
     title: 'Validate Charge',
-    icon: 'credit-card-outline',
+    icon: 'play-circle-outline',
     link: '/page/api-status/validate-charge',
 
   },
+
   {
-    title: 'tokenized-charges',
-    icon: 'credit-card-outline',
+    title: 'Tokenized Charge',
+    icon: 'code-download-outline',
     link: '/page/api-status/tokenized-charges',
 
   },
 
-
   {
-    title: 'preauthorization',
-    icon: 'credit-card-outline',
+    title: 'Preauthorization',
+    icon: 'pause-circle-outline',
     link: '/page/api-status/preauthorization',
 
   },
 
 
   {
-    title: 'otps',
-    icon: 'credit-card-outline',
+    title: 'OTP',
+    icon: 'code-outline',
     link: '/page/api-status/otps',
 
   },
   {
     title: 'Transfer',
-    icon: 'credit-card-outline',
+    icon: 'share-outline',
     link: '/page/api-status/transfers',
 
   },
 
   {
     title: 'Transactions',
-    icon: 'credit-card-outline',
+    icon: 'bar-chart-2-outline',
     link: '/page/api-status/transactions',
   },
   {
     title: 'Chargebacks',
-    icon: 'credit-card-outline',
+    icon: 'collapse-outline',
     link: '/page/api-status/chargebacks',
 
   },
 
   {
-    title: 'virtual-cards',
+    title: 'Virtual Card',
     icon: 'credit-card-outline',
     link: '/page/api-status/virtual-cards',
 
   },
   {
-    title: 'virtual-accounts',
-    icon: 'credit-card-outline',
+    title: 'Virtual Account',
+    icon: 'briefcase-outline',
     link: '/page/api-status/virtual-accounts',
 
   },
 
   {
-    title: 'subaccounts',
-    icon: 'credit-card-outline',
+    title: 'Sub Account',
+    icon: 'percent-outline',
     link: '/page/api-status/subaccounts',
 
   },
 
-
   {
-    title: 'payment-plans',
-    icon: 'credit-card-outline',
+    title: 'Payment Plan',
+    icon: 'flip-outline',
     link: '/page/api-status/payment-plans',
 
   },
   {
-    title: 'subscriptions',
-    icon: 'credit-card-outline',
+    title: 'Subscriptions',
+    icon: 'repeat-outline',
     link: '/page/api-status/subscriptions',
 
   },
   {
-    title: 'bills',
-    icon: 'credit-card-outline',
+    title: 'Bills',
+    icon: 'monitor-outline',
     link: '/page/api-status/bills',
 
   },
 
   {
-    title: 'remita-payments',
-    icon: 'credit-card-outline',
+    title: 'Remita Payment',
+    icon: 'external-link-outline',
     link: '/page/api-status/remita-payments',
 
   },
   {
     title: 'Banks',
-    icon: 'credit-card-outline',
+    icon: 'home-outline',
     link: '/page/api-status/banks',
 
   },
 
   {
     title: 'Beneficiaries',
-    icon: 'credit-card-outline',
+    icon: 'people-outline',
     link: '/page/api-status/beneficiaries',
 
   },
   {
-    title: 'settlements',
-    icon: 'credit-card-outline',
+    title: 'Settlements',
+    icon: 'trending-down-outline',
     link: '/page/api-status/settlements',
 
   },
 
   {
-    title: 'misc',
-    icon: 'credit-card-outline',
+    title: 'Misc',
+    icon: 'globe-outline',
     link: '/page/api-status/misc',
 
   },

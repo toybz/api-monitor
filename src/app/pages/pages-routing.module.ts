@@ -2,7 +2,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
-import {VirtualCardComponent} from "./virtual-card/virtual-card.component";
+
+import {ApiStatusComponent} from "./api-status/api-status.component";
 
 const routes: Routes = [{
   path: '',
@@ -10,7 +11,7 @@ const routes: Routes = [{
   children: [
     {
       path: 'api-status/:category',
-      component: VirtualCardComponent,
+      component: ApiStatusComponent,
     },
     {
       path: '',

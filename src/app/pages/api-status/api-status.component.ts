@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 
 
@@ -6,13 +6,12 @@ import { LocalDataSource } from 'ng2-smart-table';
 import { StatusComponent } from '../../components/status-component/status-component.component';
 import {ActivatedRoute, NavigationEnd, NavigationError, NavigationStart, Router} from "@angular/router";
 import {ApiService} from "../../services/api.service";
-
 @Component({
-  selector: 'ngx-smart-table',
-  templateUrl: './virtual-card.component.html',
-  styleUrls: ['./virtual-card.component.scss'],
+  selector: 'ngx-api-status',
+  templateUrl: './api-status.component.html',
+  styleUrls: ['./api-status.component.scss']
 })
-export class VirtualCardComponent {
+export class ApiStatusComponent implements OnInit {
 
   settings = {
     hideSubHeader: true,
@@ -22,12 +21,17 @@ export class VirtualCardComponent {
       delete: false,
       position: 'right',
     } ,
+    noDataMessage: 'Loading.......',
     columns: {
       name: {
         title: 'Name',
         type: 'string',
         sort:false,
-        filter: false
+        filter: false,
+        valuePrepareFunction(data){
+          let name = data.replace(/_/g, ' ')
+          return  name.charAt(0).toUpperCase() + name.slice(1)
+        }
       },
       method: {
         title: 'Method',
@@ -49,11 +53,14 @@ export class VirtualCardComponent {
         sort:false,
         filter: false
       },
-      lastRequestTime: {
-        title: 'Last Request Time',
+      duration: {
+        title: 'Duration',
         type: 'string',
         sort:false,
-        filter: false
+        filter: false,
+        valuePrepareFunction(data){
+          return data + 'ms'
+        }
       },
 
     },
